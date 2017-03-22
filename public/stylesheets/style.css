@@ -1,0 +1,100 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #00B7FF;
+}
+
+.hidden {
+  display: none;
+}
+
+#point-group input {
+  width: 50px;
+}
+
+#img-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid #000;
+}
+
+#rect {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 96px;
+    width: 96px;
+    border: 2px solid #ff0000;
+}
+
+.point {
+    position: absolute;
+    height: 4px;
+    width: 4px;
+    background: #ffffff;
+}
+
+.cutup-left {
+    margin-top: -2px;
+    margin-left: -2px;
+    cursor: nw-resize;
+}
+
+.cutup {
+    left: 50%;
+    margin-left: -2px;
+    margin-top: -2px;
+    cursor: n-resize;
+}
+
+.cutup-right {
+    left: 100%;
+    margin-left: -2px;
+    margin-top: -2px;
+    cursor: ne-resize;
+}
+
+.cutfot-left {
+    top: 100%;
+    margin-top: -2px;
+    margin-left: -2px;
+    cursor: sw-resize;
+}
+
+.cutfot {
+    top: 100%;
+    left: 50%;
+    margin-left: -2px;
+    margin-top: -2px;
+    cursor: s-resize;
+}
+
+.cutfot-right {
+    top: 100%;
+    left: 100%;
+    margin-left: -2px;
+    margin-top: -2px;
+    cursor: se-resize;
+}
+
+.cutleft {
+    margin-left: -2px;
+    top: 50%;
+    margin-top: -2px;
+    cursor: w-resize;
+}
+
+.cutright {
+    margin-left: -2px;
+    top: 50%;
+    left: 100%;
+    margin-top: -2px;
+    cursor: e-resize;
+}

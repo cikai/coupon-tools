@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset='utf-8'>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/javascripts/jquery-3.0.0.min.js"></script>
+  <script src="/javascripts/jquery-ui.min.js"></script>
+  <script src="/javascripts/main.js"></script>
+  <title>image-map-tools</title>
+</head>
+<body>
+  
+  <!-- 图片 -->
+  <img src="" alt="图片" draggable="false" id="img">
+
+  <!-- 矩形选框 -->
+  <div id="rect" class="hidden">
+    <div id="up-left" class="point cutup-left"></div>
+    <div id="up" class="point cutup"></div>
+    <div id="up-right" class="point cutup-right"></div>
+    <div id="left" class="point cutleft"></div>
+    <div  id="right" class="point cutright"></div>
+    <div id="fot-left" class="point cutfot-left"></div>
+    <div id="fot" class="point cutfot"></div>
+    <div id="fot-right" class="point cutfot-right"></div>
+  </div>
+
+  <fieldset>
+    <legend>生成图像映射</legend>
+
+    <!-- 上传图片 -->
+    <div class="img-upload">
+      <p>
+        <input type="file" id="img-upload" onchange="loadImg(this)">
+      </p>
+    </div>
+
+    <!-- 坐标值 -->
+    <div id="point-group">
+      <p>
+        <span>左上角：</span>
+        <input type="text" id="x1" disabled="disabled">
+        <span>, </span>
+        <input type="text" id="y1" disabled="disabled">
+      </p>
+      <p>
+        <span>右下角：</span>
+        <input type="text" id="x2" disabled="disabled">
+        <span>, </span>
+        <input type="text" id="y2" disabled="disabled">
+      </p>
+    </div>
+
+    <!-- 生成代码 -->
+    <div class="get-map">
+      <p>
+        <span>链接：</span>
+        <input type="text" id="link" placeholder="http:// 或 https://">
+      </p>
+      <p>
+        <input type="button" value="生成代码并预览" onclick="generate()">
+      </p>
+    </div>
+
+    <!-- 代码区域 -->
+    <div class="code">
+      <textarea name="code" id="code" cols="100" rows="10"></textarea>
+    </div>
+    <div class="preview" id="preview"></div>
+  </fieldset>
+
+</body>
+</html>
