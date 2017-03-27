@@ -58,13 +58,19 @@
         <input type="text" id="link" placeholder="http:// 或 https://">
       </p>
       <p>
+        <input type="button" value="增加MapArea" onclick="addMapArea()">
         <input type="button" value="生成代码并预览" onclick="generate()">
       </p>
     </div>
 
+    <!-- Maps -->
+    <div class="maps" id="maps"></div>
+
     <!-- 代码区域 -->
     <div class="code">
-      <textarea name="code" id="code" cols="100" rows="10"></textarea>
+      <p>
+        <textarea name="code" id="code" cols="100" rows="10"></textarea>
+      </p>
     </div>
     <div class="preview" id="preview"></div>
   </fieldset>

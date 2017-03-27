@@ -1,3 +1,5 @@
+var MAP_NO = parseInt(10*Math.random());
+
 $(function () {
   $("#rect").draggable({containment: 'parent'});
   var rightdiv = document.getElementById("right");
@@ -171,17 +173,30 @@ function loadImg(img) {
 }
 
 function generate() {
-  var map_no = parseInt(10*Math.random());
-  var link = $("#link").val();
   var imgsrc = $("#img").attr("src");
+  var img = "<img src='" + imgsrc + "' border='0' usemap='#" + MAP_NO + "' alt='优惠券'/>";
+  var map_ = "<map name='" + MAP_NO + "'>";
+  var _map = "</map>";
+  var inputs = $("#maps input");
+  var arealist = "";
+  for(i=0; i<inputs.length; i++) {
+    arealist += inputs[i].value;
+  }
+
+  $("#code").val(img + map_ + arealist + _map);
+  $("#preview").html(img + map_ + arealist + _map);
+}
+
+function addMapArea() {
+  var link = $("#link").val();
   var x1 = $("#x1").val();
   var y1 = $("#y1").val();
   var x2 = $("#x2").val();
   var y2 = $("#y2").val();
-  var img = "<img src='" + imgsrc + "' border='0' usemap='#" + map_no + "' alt='优惠券'/>";
-  var map = "<map name='" + map_no + "'>" + "<area shape='rect' coords='" 
-    + x1 + "," + y1 + "," + x2 + "," + y2 +"' target='_blank' alt='5' href='" + link + "' /></map>";
-  
-  $("#code").val(img + map);
-  $("#preview").html(img + map);
+  var area = "<area shape='rect' coords='" 
+    + x1 + "," + y1 + "," + x2 + "," + y2 +"' target='_blank' alt='5' href='" + link + "' />";
+  var btn = "<button onclick=\"$(this).parent('p').remove();\">删除</button>";
+
+  $("#maps").append('<p><input type="text" value="' + area + '">' + btn +'</p>');
+  $("#link").val("");
 }
