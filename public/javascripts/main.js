@@ -200,3 +200,8 @@ function addMapArea() {
   $("#maps").append('<p><input type="text" value="' + area + '">' + btn +'</p>');
   $("#link").val("");
 }
+
+function changeSize(select) {
+  var width = $(select).val();
+  $("#img").css("width", width);
+}
