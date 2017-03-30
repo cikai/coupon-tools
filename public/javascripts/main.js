@@ -126,10 +126,11 @@ $(function () {
   }
 
   function lightpicture() {
-    var top = maindiv.offsetTop;
-    var buttom = maindiv.offsetTop + maindiv.offsetHeight;
-    var left = maindiv.offsetLeft;
-    var right = maindiv.offsetWidth + maindiv.offsetLeft;
+    var img = document.getElementById("img");
+    var top = maindiv.offsetTop - img.offsetTop;
+    var buttom = maindiv.offsetTop + maindiv.offsetHeight - img.offsetTop;
+    var left = maindiv.offsetLeft - img.offsetLeft;
+    var right = maindiv.offsetWidth + maindiv.offsetLeft - img.offsetLeft;
     $("#x1").val(left);
     $("#y1").val(top);
     $("#x2").val(right);
