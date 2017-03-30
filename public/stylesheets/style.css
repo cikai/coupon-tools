@@ -103,3 +103,12 @@ a {
     width: 500px;
     margin-right: 10px;
 }
+
+.img-upload input {
+    width: 500px;
+    margin-right: 10px;
+}
+
+.get-map input {
+    width: 455px;
+}

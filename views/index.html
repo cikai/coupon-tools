@@ -47,6 +47,10 @@
       <p>
         <input type="file" id="img-upload" onchange="loadImg(this)">
       </p>
+      <p>
+        <input type="text" id="img-url" placeholder="http:// 或 https://">
+        <button onclick="loadImgUrl()">加载网络图片</button>
+      </p>
     </div>
 
     <!-- 坐标值 -->
@@ -72,8 +76,8 @@
         <input type="text" id="link" placeholder="http:// 或 https://">
       </p>
       <p>
-        <input type="button" value="增加MapArea" onclick="addMapArea()">
-        <input type="button" value="生成代码并预览" onclick="generate()">
+        <button onclick="addMapArea()">增加MapArea</button>
+        <button onclick="generate()">生成代码并预览</button>
       </p>
     </div>
 

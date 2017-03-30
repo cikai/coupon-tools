@@ -205,3 +205,9 @@ function changeSize(select) {
   var width = $(select).val();
   $("#img").css("width", width);
 }
+
+function loadImgUrl() {
+  var url = $("#img-url").val();
+  $("#img").attr("src", url);
+  $("#rect").removeClass("hidden");
+}
